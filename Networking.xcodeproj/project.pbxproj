@@ -10,6 +10,11 @@
 		461BB4DA1DFA136100F9202A /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4D01DFA136100F9202A /* Networking.framework */; };
 		461BB4DF1DFA136100F9202A /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BB4DE1DFA136100F9202A /* NetworkingTests.swift */; };
 		461BB4EB1DFA137400F9202A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BB4EA1DFA137400F9202A /* Networking.swift */; };
+		461BB4F11DFA261100F9202A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4EC1DFA261100F9202A /* Alamofire.framework */; };
+		461BB4F21DFA261100F9202A /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4ED1DFA261100F9202A /* Moya.framework */; };
+		461BB4F31DFA261100F9202A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4EE1DFA261100F9202A /* Result.framework */; };
+		461BB4F41DFA261100F9202A /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4EF1DFA261100F9202A /* RxMoya.framework */; };
+		461BB4F51DFA261100F9202A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4F01DFA261100F9202A /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		461BB4DE1DFA136100F9202A /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		461BB4E01DFA136100F9202A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		461BB4EA1DFA137400F9202A /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		461BB4EC1DFA261100F9202A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		461BB4ED1DFA261100F9202A /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		461BB4EE1DFA261100F9202A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		461BB4EF1DFA261100F9202A /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		461BB4F01DFA261100F9202A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461BB4F11DFA261100F9202A /* Alamofire.framework in Frameworks */,
+				461BB4F21DFA261100F9202A /* Moya.framework in Frameworks */,
+				461BB4F31DFA261100F9202A /* Result.framework in Frameworks */,
+				461BB4F41DFA261100F9202A /* RxMoya.framework in Frameworks */,
+				461BB4F51DFA261100F9202A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +71,7 @@
 				461BB4D21DFA136100F9202A /* Networking */,
 				461BB4DD1DFA136100F9202A /* NetworkingTests */,
 				461BB4D11DFA136100F9202A /* Products */,
+				80C1FD36D227B84E9E9E0010 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +102,18 @@
 			path = NetworkingTests;
 			sourceTree = "<group>";
 		};
+		80C1FD36D227B84E9E9E0010 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				461BB4EC1DFA261100F9202A /* Alamofire.framework */,
+				461BB4ED1DFA261100F9202A /* Moya.framework */,
+				461BB4EE1DFA261100F9202A /* Result.framework */,
+				461BB4EF1DFA261100F9202A /* RxMoya.framework */,
+				461BB4F01DFA261100F9202A /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -103,10 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 461BB4E41DFA136100F9202A /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
+				06D7255993BF0FE7FE5BC3EF /* [CP] Check Pods Manifest.lock */,
 				461BB4CB1DFA136100F9202A /* Sources */,
 				461BB4CC1DFA136100F9202A /* Frameworks */,
 				461BB4CD1DFA136100F9202A /* Headers */,
 				461BB4CE1DFA136100F9202A /* Resources */,
+				7ED5121190CBA65CAB921D72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +221,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06D7255993BF0FE7FE5BC3EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7ED5121190CBA65CAB921D72 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Networking/Pods-Networking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		461BB4CB1DFA136100F9202A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -307,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -327,6 +390,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -347,6 +414,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +471,7 @@
 				461BB4E61DFA136100F9202A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		461BB4E71DFA136100F9202A /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +480,7 @@
 				461BB4E91DFA136100F9202A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
