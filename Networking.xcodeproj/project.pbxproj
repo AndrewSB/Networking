@@ -70,8 +70,8 @@
 		461BB4C61DFA136100F9202A = {
 			isa = PBXGroup;
 			children = (
-				461BB4D21DFA136100F9202A /* Networking */,
-				461BB4DD1DFA136100F9202A /* NetworkingTests */,
+				461BB4D21DFA136100F9202A /* Source */,
+				461BB4DD1DFA136100F9202A /* Tests */,
 				461BB4D11DFA136100F9202A /* Products */,
 				80C1FD36D227B84E9E9E0010 /* Frameworks */,
 			);
@@ -86,23 +86,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		461BB4D21DFA136100F9202A /* Networking */ = {
+		461BB4D21DFA136100F9202A /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				461BB4EA1DFA137400F9202A /* Networking.swift */,
 				461BB4F61DFA278200F9202A /* OnlineProvider.swift */,
 				461BB4D41DFA136100F9202A /* Info.plist */,
 			);
-			path = Networking;
+			name = Source;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		461BB4DD1DFA136100F9202A /* NetworkingTests */ = {
+		461BB4DD1DFA136100F9202A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				461BB4DE1DFA136100F9202A /* NetworkingTests.swift */,
 				461BB4E01DFA136100F9202A /* Info.plist */,
 			);
-			path = NetworkingTests;
+			name = Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		80C1FD36D227B84E9E9E0010 /* Frameworks */ = {
@@ -381,7 +383,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.Networking;
@@ -405,7 +407,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.Networking;
@@ -419,7 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.NetworkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,7 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.NetworkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
