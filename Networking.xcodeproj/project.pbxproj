@@ -15,6 +15,7 @@
 		461BB4F31DFA261100F9202A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4EE1DFA261100F9202A /* Result.framework */; };
 		461BB4F41DFA261100F9202A /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4EF1DFA261100F9202A /* RxMoya.framework */; };
 		461BB4F51DFA261100F9202A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4F01DFA261100F9202A /* RxSwift.framework */; };
+		461BB4F71DFA278200F9202A /* OnlineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BB4F61DFA278200F9202A /* OnlineProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		461BB4EE1DFA261100F9202A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		461BB4EF1DFA261100F9202A /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		461BB4F01DFA261100F9202A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		461BB4F61DFA278200F9202A /* OnlineProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				461BB4EA1DFA137400F9202A /* Networking.swift */,
+				461BB4F61DFA278200F9202A /* OnlineProvider.swift */,
 				461BB4D41DFA136100F9202A /* Info.plist */,
 			);
 			path = Networking;
@@ -131,12 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 461BB4E41DFA136100F9202A /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
-				06D7255993BF0FE7FE5BC3EF /* [CP] Check Pods Manifest.lock */,
+				461BB4F81DFA281400F9202A /* swiftlint */,
 				461BB4CB1DFA136100F9202A /* Sources */,
 				461BB4CC1DFA136100F9202A /* Frameworks */,
 				461BB4CD1DFA136100F9202A /* Headers */,
 				461BB4CE1DFA136100F9202A /* Resources */,
-				7ED5121190CBA65CAB921D72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,35 +224,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06D7255993BF0FE7FE5BC3EF /* [CP] Check Pods Manifest.lock */ = {
+		461BB4F81DFA281400F9202A /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = swiftlint;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7ED5121190CBA65CAB921D72 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Networking/Pods-Networking-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -260,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				461BB4EB1DFA137400F9202A /* Networking.swift in Sources */,
+				461BB4F71DFA278200F9202A /* OnlineProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
