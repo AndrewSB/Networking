@@ -16,6 +16,7 @@
 		461BB4F41DFA261100F9202A /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4EF1DFA261100F9202A /* RxMoya.framework */; };
 		461BB4F51DFA261100F9202A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4F01DFA261100F9202A /* RxSwift.framework */; };
 		461BB4F71DFA278200F9202A /* OnlineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BB4F61DFA278200F9202A /* OnlineProvider.swift */; };
+		461BB4FA1DFA2C7000F9202A /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BB4F91DFA2C7000F9202A /* RxSwiftExt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		461BB4EF1DFA261100F9202A /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		461BB4F01DFA261100F9202A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		461BB4F61DFA278200F9202A /* OnlineProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineProvider.swift; sourceTree = "<group>"; };
+		461BB4F91DFA2C7000F9202A /* RxSwiftExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwiftExt.framework; path = Carthage/Build/iOS/RxSwiftExt.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 				461BB4F21DFA261100F9202A /* Moya.framework in Frameworks */,
 				461BB4F31DFA261100F9202A /* Result.framework in Frameworks */,
 				461BB4F41DFA261100F9202A /* RxMoya.framework in Frameworks */,
+				461BB4FA1DFA2C7000F9202A /* RxSwiftExt.framework in Frameworks */,
 				461BB4F51DFA261100F9202A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +96,6 @@
 				461BB4F61DFA278200F9202A /* OnlineProvider.swift */,
 				461BB4D41DFA136100F9202A /* Info.plist */,
 			);
-			name = Source;
 			path = Source;
 			sourceTree = "<group>";
 		};
@@ -103,18 +105,18 @@
 				461BB4DE1DFA136100F9202A /* NetworkingTests.swift */,
 				461BB4E01DFA136100F9202A /* Info.plist */,
 			);
-			name = Tests;
 			path = Tests;
 			sourceTree = "<group>";
 		};
 		80C1FD36D227B84E9E9E0010 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				461BB4EE1DFA261100F9202A /* Result.framework */,
 				461BB4EC1DFA261100F9202A /* Alamofire.framework */,
 				461BB4ED1DFA261100F9202A /* Moya.framework */,
-				461BB4EE1DFA261100F9202A /* Result.framework */,
 				461BB4EF1DFA261100F9202A /* RxMoya.framework */,
 				461BB4F01DFA261100F9202A /* RxSwift.framework */,
+				461BB4F91DFA2C7000F9202A /* RxSwiftExt.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,11 +138,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 461BB4E41DFA136100F9202A /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
+				2921C8C48FF67925CF21067B /* [CP] Check Pods Manifest.lock */,
 				461BB4F81DFA281400F9202A /* swiftlint */,
 				461BB4CB1DFA136100F9202A /* Sources */,
 				461BB4CC1DFA136100F9202A /* Frameworks */,
 				461BB4CD1DFA136100F9202A /* Headers */,
 				461BB4CE1DFA136100F9202A /* Resources */,
+				D177659EC89111D04D9A6B88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +230,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2921C8C48FF67925CF21067B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		461BB4F81DFA281400F9202A /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +258,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		D177659EC89111D04D9A6B88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Networking/Pods-Networking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 

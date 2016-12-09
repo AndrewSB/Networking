@@ -1,1 +1,2 @@
 github "Moya/Moya" >= 8.0.0
+github "RxSwiftCommunity/RxSwiftExt"
