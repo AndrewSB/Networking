@@ -1,2 +1,2 @@
 github "Moya/Moya" >= 8.0.0
-github "RxSwiftCommunity/RxSwiftExt"
+github "RxSwiftCommunity/RxSwiftExt" "master" # targeting master until they release the iOS 8 compatiblity commit
